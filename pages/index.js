@@ -2,7 +2,7 @@
 import Login from '../components/Login';
 import { useMoralis } from 'react-moralis';
 import { useState } from "react";
-import Image from 'next/image'
+// import Image from 'next/image'
 // import icon from './images/dh-icon.svg'
 import Script from 'next/script'
 
@@ -46,7 +46,14 @@ export default function Home() {
         <nav id="main-nav" className="navbar navbar-expand-lg fixed-top">
           <div className="container">
             <a className="navbar-brand" href="#">
-              <Image
+              {/* <Image
+                // loader={myLoader}
+                src="/logo-white.png"
+                alt="Logo"
+                width={40}
+                height={40}
+              /> */}
+              <img
                 // loader={myLoader}
                 src="/logo-white.png"
                 alt="Logo"
