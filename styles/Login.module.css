@@ -35,9 +35,10 @@
 */
 
 .error {
-  color: red;
-  text-align: center;
-  font-size: 10px;
+  background-color: red;
+  color: white;
   font-style: italic;
-  margin: 5px;
+  margin: 0 5px;
+  padding: 8px;
+  border-radius: 0.25rem;
 }

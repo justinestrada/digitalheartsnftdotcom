@@ -35,6 +35,12 @@ a {
   background-color: #006fff;
 }
 
+a.text-white,
+a.text-white:hover,
+a.text-white:focus {
+  color: white;
+}
+
 .text-shadow {
   text-shadow: 0 0 6px #006fff, 0 0 20px #1877f2;
 }
@@ -42,21 +48,33 @@ a {
 .card {
   backdrop-filter: blur(3px);
   background-color: rgba(255, 255, 255, 0.15);
-  border: 1px solid #50207b;
+  border: 1px solid rgba(61, 110, 204, 0.25);
   -webkit-box-shadow: 0 0 16px 0 rgb(196 29 255 / 20%);
   box-shadow: 0 0 16px 0 rgb(196 29 255 / 20%);
 }
 
 #main-nav {
+  /*
   backdrop-filter: blur(3px);
   background-color: rgba(0, 0, 0, 0.325);
   border-bottom: 1px solid rgb(31, 41, 55);
   -webkit-box-shadow: 0 0 16px 0 rgb(196 29 255 / 20%);
-  box-shadow: 0 0 16px 0 rgb(196 29 255 / 20%);  
+  box-shadow: 0 0 16px 0 rgb(196 29 255 / 20%);
+  */
+  padding: 2rem 0;
+}
+
+#main-nav .navbar-collapse .navbar-nav {
+  display: none;
 }
 
 #main-nav .nav-link {
   color: white;
+  text-transform: uppercase;
+}
+
+#main-nav .btn-primary {
+  padding: 0.5rem 1rem;
   text-transform: uppercase;
 }
 
@@ -158,6 +176,7 @@ a {
   align-items: center;  
 }
 
+/*
 #hero::before {
   content: "";
   position: absolute;
@@ -166,6 +185,18 @@ a {
   height: 100%;
   width: 100%;
   background-color: rgba(0, 0, 0, 0.325);
+}
+*/
+
+#hero_overlay-container {
+  position: absolute;
+  bottom: 128px;
+}
+
+#hero_overlay-container_right {
+  display: flex;
+  justify-content: end;
+  align-items: end;
 }
 
 #hero .video-wrap {
@@ -219,6 +250,7 @@ a {
   z-index: 2;
 }
 
+/*
 #hero_inner-card .card-body {
   background: rgba(0, 0, 0, 0.325);
   border-radius: 0.25rem;
@@ -227,6 +259,7 @@ a {
 #hero_inner-card .card-subtitle {
   font-size: 24px;
 }
+*/
 
 #hero_desktop-nav {
   position: absolute;
@@ -351,4 +384,24 @@ a {
   100%{
     background-position: 0% 50%
   }
+}
+
+#marketplace {
+  padding-top: 8rem 0;
+  background-position: center;
+  background-size: cover;
+}
+
+#marketplace #main-nav {
+  position: absolute;
+}
+
+.marketplace_stat {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: #1d0c4a;
+  color: white;
+  padding: 1rem;
+  border-radius: 0.25rem;
 }
