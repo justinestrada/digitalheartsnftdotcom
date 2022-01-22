@@ -15,6 +15,24 @@ const marketplace = () => {
     'Set 9',
     'Set 10'
   ]
+  const items = [
+    {
+      "name": "Holographic Thicc Arcanine",
+      "external_url": "https://thicccollectibles.com/",
+      "description": "A Thicc Collectible that has been long admired for its thiccness. It busts down gracefully, as if on wings.",
+      "image": "https://thiccpkmn.io/wp-content/themes/thicc-api/assets/images/pokedex/059-holo.jpg",
+      "attributes": [
+        {
+          "trait_type": "Rarity",
+          "value": "Uncommon"
+        },
+        {
+          "trait_type": "Type1",
+          "value": "Fire"
+        }
+      ]
+    },
+  ]
   return (
     <>
       <main id="marketplace" style={{backgroundImage: 'url(/bg-colorful.jpg)'}}>
@@ -43,12 +61,51 @@ const marketplace = () => {
               <div className="col-lg-3">
                 <div className="marketplace_stat">
                   <div className="stat_label">Total Volume</div>
-                  <div className="stat_value">1000 ETH</div>
+                  <div className="stat_value">100 ETH</div>
+                </div>
+              </div>
+            </div>
+            <div id="marketplace_filters" className="row mb-4">
+              <div className="col-lg-4">
+                <div className="form-group">
+                  <label className="text-white">Sets</label>
+                  <select className="form-control">
+                    { sets ? (
+                      sets?.map((item, index) => {
+                        return (
+                          <option key={index}>{item}</option>
+                        )
+                      })
+                    ) : (
+                      <div className="py-5 text-center">Loading...</div>
+                    )}
+                  </select>
                 </div>
               </div>
             </div>
             <div id="marketplace_listing">
-              <h3 className="text-white">Sets</h3>
+              <div className="row">
+                {items.map(function(item, index) {
+                  const is_owner = false
+                  return (
+                    <div className="col-lg-4 col-xs-3" key={index}>
+                      <div className="card card-nft">
+                        <div className="card-body">
+                          <div className="text-white mb-2">{item.attributes[0].value}</div>
+                          <img src={item.image} alt={item.name} className="mb-2"/>
+                          <h3 className="text-white text-shadow mb-2">{item.name}</h3>
+                          {is_owner ? (
+                            <button type="button" className="btn btn-primary">SELL</button>
+                          ) : (
+                            <button type="button" className="btn btn-primary">BUY</button>
+                          )}
+                        </div>
+                      </div>
+                    </div>
+                  )
+                })}                
+              </div>
+              {/*
               <div className="accordion" id="accordionSets">
                 { sets ? (
                   sets?.map((item, index) => {
@@ -64,13 +121,14 @@ const marketplace = () => {
                             <p>Lorem ipsum</p>
                           </div>
                         </div>
-                      </div>                    
+                      </div>     
                     )
                   })
                 ) : (
                   <div className="py-5 text-center">Loading...</div>
                 )}
-              </div>
+              </div> 
+              */}
             </div>
           </div>
         </section>

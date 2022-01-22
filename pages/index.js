@@ -58,17 +58,21 @@ export default function Home() {
             <div className="container">
               <div className="row">
                 <div className="col-lg-5">
-                  <div className="text-white text-shadow">
-                    <h1 className="text-uppercase mb-3">Digital Hearts NFT</h1>
-                    <div className="card-subtitle mb-3">A unique collection of high quality 5D NFT wearables <br/>to customize your Metaverse avatar.</div>
-                    {/*
-                     // Link is throwing a build error??
-                    <Link href="/marketplace" className="text-white text-uppercase">
-                      Buy A Collectible 
-                      <div style={{ marginLeft: '8px' }}>
-                        <IconArrow />
+                  <div id="hero_inner-left-card" className="card">
+                    <div className="card-body">
+                      <div className="text-white text-shadow">
+                        <h1 className="text-uppercase mb-3">Digital Hearts NFT</h1>
+                        <div className="card-subtitle mb-3">A unique collection of high quality 5D NFT wearables <br/>to customize your Metaverse avatar.</div>
+                        {/*
+                        // Link is throwing a build error??
+                        <Link href="/marketplace" className="text-white text-uppercase">
+                          Buy A Collectible 
+                          <div style={{ marginLeft: '8px' }}>
+                            <IconArrow />
+                          </div>
+                        </Link> */}
                       </div>
-                    </Link> */}
+                    </div>
                   </div>
                 </div>
                 <div id="hero_overlay-container_right" className="col-lg-3 offset-lg-4">

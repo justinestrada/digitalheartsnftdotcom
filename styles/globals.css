@@ -26,7 +26,7 @@ a {
 
 .btn-primary {
   backdrop-filter: blur(3px);
-  background-color: rgba(0, 0, 0, 0.05);
+  background-color: rgba(1, 110, 255, 0.325);
   border-color: #006fff;
 }
 
@@ -47,7 +47,8 @@ a.text-white:focus {
 
 .card {
   backdrop-filter: blur(3px);
-  background-color: rgba(255, 255, 255, 0.15);
+  /* background-color: rgba(255, 255, 255, 0.15); */
+  background-color: rgba(80, 32, 122, 0.325);
   border: 1px solid rgba(61, 110, 204, 0.25);
   -webkit-box-shadow: 0 0 16px 0 rgb(196 29 255 / 20%);
   box-shadow: 0 0 16px 0 rgb(196 29 255 / 20%);
@@ -261,6 +262,10 @@ a.text-white:focus {
 }
 */
 
+#hero_inner-left-card .card-subtitle {
+  font-size: 20px;
+}
+
 #hero_desktop-nav {
   position: absolute;
   bottom: 0;
@@ -387,7 +392,7 @@ a.text-white:focus {
 }
 
 #marketplace {
-  padding-top: 8rem 0;
+  padding: 8rem 0;
   background-position: center;
   background-size: cover;
 }
@@ -404,4 +409,12 @@ a.text-white:focus {
   color: white;
   padding: 1rem;
   border-radius: 0.25rem;
+}
+
+#marketplace_listing .card-nft {
+  background-color: #1d0c4a;
+}
+
+.card-nft img {
+  width: 100%;
 }
