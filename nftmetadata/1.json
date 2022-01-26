@@ -1,0 +1,24 @@
+{
+    "name": "Bettina Hat Zebra",
+    "external_url": "https://digitalheartsnft.com/",
+    "description": "",
+    "image": "http://mydigitalsauce.com/wp-content/uploads/2022/01/Bettina-Hat-Zebra.jpg",
+    "attributes": [
+       {
+          "trait_type": "Item Type",
+          "value": "Hat"
+       },
+       {
+          "trait_type": "Hat Type",
+          "value": "Bettina"
+       },
+       {
+          "trait_type": "Color",
+          "value": "White"
+       },
+       {
+          "trait_type": "Pattern",
+          "value": "Zebra"
+       }
+    ]
+}

@@ -17,49 +17,81 @@ const marketplace = () => {
   ]
   const items = [
     {
-      "name": "Holographic Thicc Arcanine",
-      "external_url": "https://thicccollectibles.com/",
-      "description": "A Thicc Collectible that has been long admired for its thiccness. It busts down gracefully, as if on wings.",
-      "image": "https://thiccpkmn.io/wp-content/themes/thicc-api/assets/images/pokedex/059-holo.jpg",
+      "name": "Bettina Hat Purple",
+      "external_url": "https://digitalheartsnft.com/",
+      "description": "",
+      "image": "http://mydigitalsauce.com/wp-content/uploads/2022/01/Bettina-Hat-Purple.jpg",
       "attributes": [
         {
-          "trait_type": "Rarity",
-          "value": "Uncommon"
+          "trait_type": "Item Type",
+          "value": "Hat"
         },
         {
-          "trait_type": "Type1",
-          "value": "Fire"
+          "trait_type": "Hat Type",
+          "value": "Bettina"
+        },
+        {
+          "trait_type": "Color",
+          "value": "Purple"
+        },
+        {
+          "trait_type": "Pattern",
+          "value": "None"
         }
       ]
     },
+    {
+      "name": "Bettina Hat Zebra",
+      "external_url": "https://digitalheartsnft.com/",
+      "description": "",
+      "image": "http://mydigitalsauce.com/wp-content/uploads/2022/01/Bettina-Hat-Zebra.jpg",
+      "attributes": [
+        {
+          "trait_type": "Item Type",
+          "value": "Hat"
+        },
+        {
+          "trait_type": "Hat Type",
+          "value": "Bettina"
+        },
+        {
+          "trait_type": "Color",
+          "value": "White"
+        },
+        {
+          "trait_type": "Pattern",
+          "value": "Zebra"
+        }
+      ]
+    },  
   ]
   return (
     <>
       <main id="marketplace" style={{backgroundImage: 'url(/bg-colorful.jpg)'}}>
         <Header />
-        <section id="marketplace_inner-wrap" className="container card">
+        <section id="marketplace_inner-wrap" className="container card px-0">
           <div className="card-body">
             <div id="marketplace_stats" className="row mb-4">
               <div className="col-lg-3">
-                <div className="marketplace_stat">
+                <div className="marketplace_stat border-corners">
                   <div className="stat_label">Items in Collection</div>
                   <div className="stat_value">1000</div>
                 </div>
               </div>
               <div className="col-lg-3">
-                <div className="marketplace_stat">
+                <div className="marketplace_stat border-corners">
                   <div className="stat_label">Owners</div>
                   <div className="stat_value">1000</div>
                 </div>
               </div>
               <div className="col-lg-3">
-                <div className="marketplace_stat">
+                <div className="marketplace_stat border-corners">
                   <div className="stat_label">Floor Price</div>
                   <div className="stat_value">1 ETH</div>
                 </div>
               </div>
               <div className="col-lg-3">
-                <div className="marketplace_stat">
+                <div className="marketplace_stat border-corners">
                   <div className="stat_label">Total Volume</div>
                   <div className="stat_value">100 ETH</div>
                 </div>
@@ -89,7 +121,7 @@ const marketplace = () => {
                   const is_owner = false
                   return (
                     <div className="col-lg-4 col-xs-3" key={index}>
-                      <div className="card card-nft">
+                      <div className="card card-nft border-corners">
                         <div className="card-body">
                           <div className="text-white mb-2">{item.attributes[0].value}</div>
                           <img src={item.image} alt={item.name} className="mb-2"/>

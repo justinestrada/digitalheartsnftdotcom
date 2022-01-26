@@ -401,6 +401,12 @@ a.text-white:focus {
   position: absolute;
 }
 
+#marketplace_inner-wrap {
+  border: 1px solid rgba(175, 76, 255, 0.325);
+  box-shadow: 0 0 16px 0 rgba(196, 29, 255, 0.325);
+  background-color: #0f052e;
+}
+
 .marketplace_stat {
   display: flex;
   flex-direction: column;
@@ -417,4 +423,40 @@ a.text-white:focus {
 
 .card-nft img {
   width: 100%;
+  border-radius: 0.25rem;  
 }
+
+.border-corners {
+  position: relative;
+  --bGapSize: 12;
+  --bBorderSize: 2;
+  --color: #006fff;
+}
+
+.border-corners:before,
+.border-corners:after {
+  position: absolute;
+  /* top: calc(0px - (var(--bBorderSize) * 1px) ); */
+  top: -2px;
+  /* height: calc( 100% + ( var(--bBorderSize) * 2) * 1px ); */
+  /* height: 100%; */
+  height: calc(100% + 4px);
+  background-color: var(--color);
+  content: "";
+  width: calc(var(--bGapSize) * 0.1rem);
+  clip-path: polygon(calc(100% - ( var(--bBorderSize) * 1px ) ) calc( ( var(--bGapSize) * 1px ) ), calc(100% - ( var(--bBorderSize) * 1px ) ) calc( ( var(--bBorderSize) * 1px ) ), calc(100% - ( (var(--bGapSize) ) * 1px ) ) calc( var(--bBorderSize) * 1px ), calc(100% - ( (var(--bGapSize) ) * 1px ) ) 0px, 100% 0px, 100% calc( ( var(--bGapSize) * 1px ) ), 100% calc(100% - (var(--bGapSize) ) * 1px ), calc(100% - ( var(--bBorderSize) * 1px ) ) calc( 100% - ( var(--bGapSize) * 1px ) ), calc(100% - ( var(--bBorderSize) * 1px ) ) calc( 100% - ( var(--bBorderSize) * 1px ) ), calc(100% - ( (var(--bGapSize) ) * 1px ) ) calc( 100% - ( var(--bBorderSize) * 1px ) ), calc(100% - ( (var(--bGapSize) ) * 1px ) ) 100%, 100% 100%, 100% calc( ( var(--bGapSize) * 1px ) ));
+}
+
+.border-corners:before {
+  /* left: calc( 0px - (var(--bBorderSize) * 1px) ); */
+  left: 0px;
+  transform: scaleX(-1);
+  border-radius: 0.25rem;
+}
+
+.border-corners:after {
+  /* right: calc( 0px - (var(--bBorderSize) * 1px) ); */
+  right: 0px;
+  border-radius: 0.25rem;
+}
+
