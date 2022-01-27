@@ -1,0 +1,24 @@
+{
+    "name": "Daryn Boots Watermelon",
+    "external_url": "https://digitalheartsnft.com/",
+    "description": "",
+    "image": "http://mydigitalsauce.com/wp-content/uploads/2022/01/Daryn-Boots-Watermelon.jpg",
+    "attributes": [
+       {
+          "trait_type": "Item Type",
+          "value": "Shoes"
+       },
+       {
+          "trait_type": "Shoes Type",
+          "value": "Boots"
+       },
+       {
+          "trait_type": "Color",
+          "value": "Red"
+       },
+       {
+          "trait_type": "Pattern",
+          "value": "Watermelon"
+       }
+    ]
+}
