@@ -1,8 +1,10 @@
 
 import Header from '../components/Header';
 import Script from 'next/script'
+import { useMoralis } from 'react-moralis'
 
-const marketplace = () => {
+export default function Marketplace() {
+  const { isAuthenticated, authenticate } = useMoralis();
   const sets = [
     'Festival Classics',
     'Fruit Loops',
@@ -63,7 +65,55 @@ const marketplace = () => {
           "value": "Zebra"
         }
       ]
-    },  
+    },
+    {
+      "name": "Carly Romper Fruits",
+      "external_url": "https://digitalheartsnft.com/",
+      "description": "",
+      "image": "http://mydigitalsauce.com/wp-content/uploads/2022/01/Carly-Romper-Fruits.jpg",
+      "attributes": [
+         {
+            "trait_type": "Item Type",
+            "value": "Chest"
+         },
+         {
+            "trait_type": "Chest Type",
+            "value": "Romper"
+         },
+         {
+            "trait_type": "Color",
+            "value": "White"
+         },
+         {
+            "trait_type": "Pattern",
+            "value": "Fruits"
+         }
+      ]
+    },
+    {
+      "name": "Daryn Boots Watermelon",
+      "external_url": "https://digitalheartsnft.com/",
+      "description": "",
+      "image": "http://mydigitalsauce.com/wp-content/uploads/2022/01/Daryn-Boots-Watermelon.jpg",
+      "attributes": [
+         {
+            "trait_type": "Item Type",
+            "value": "Shoes"
+         },
+         {
+            "trait_type": "Shoes Type",
+            "value": "Boots"
+         },
+         {
+            "trait_type": "Color",
+            "value": "Red"
+         },
+         {
+            "trait_type": "Pattern",
+            "value": "Watermelon"
+         }
+      ]
+    }
   ]
   return (
     <>
@@ -120,17 +170,29 @@ const marketplace = () => {
                 {items.map(function(item, index) {
                   const is_owner = false
                   return (
-                    <div className="col-lg-4 col-xs-3" key={index}>
+                    <div className="col-md-4 col-lg-3 mb-4" key={index}>
                       <div className="card card-nft border-corners">
                         <div className="card-body">
-                          <div className="text-white mb-2">{item.attributes[0].value}</div>
-                          <img src={item.image} alt={item.name} className="mb-2"/>
-                          <h3 className="text-white text-shadow mb-2">{item.name}</h3>
-                          {is_owner ? (
-                            <button type="button" className="btn btn-primary">SELL</button>
-                          ) : (
-                            <button type="button" className="btn btn-primary">BUY</button>
-                          )}
+                          <div>
+                            <div className="text-white mb-2">{item.attributes[0].value}</div>
+                            <img src={item.image} alt={item.name} className="mb-2"/>
+                          </div>
+                          <div>
+                            <h3 className="text-white text-shadow mb-2">{item.name}</h3>
+                            {isAuthenticated ? (
+                              <>
+                                {is_owner ? (
+                                  <button type="button" className="btn btn-primary">SELL</button>
+                                ) : (
+                                  <button type="button" className="btn btn-primary">BUY</button>
+                                )}
+                              </>
+                            ) : (
+                              <>
+                                <button onClick={authenticate} type="button" className="btn btn-primary">CONNECT</button>
+                              </>
+                            )}
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -169,5 +231,3 @@ const marketplace = () => {
     </>
   )
 }
-
-export default marketplace;

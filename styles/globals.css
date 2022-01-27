@@ -418,7 +418,14 @@ a.text-white:focus {
 }
 
 #marketplace_listing .card-nft {
+  height: 100%;
   background-color: #1d0c4a;
+}
+
+#marketplace_listing .card-nft .card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .card-nft img {
@@ -431,6 +438,10 @@ a.text-white:focus {
   --bGapSize: 12;
   --bBorderSize: 2;
   --color: #006fff;
+}
+
+.border-corners_white {
+  --color: white;
 }
 
 .border-corners:before,

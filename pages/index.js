@@ -58,7 +58,7 @@ export default function Home() {
             <div className="container">
               <div className="row">
                 <div className="col-lg-5">
-                  <div id="hero_inner-left-card" className="card">
+                  <div id="hero_inner-left-card" className="card border-corners border-corners_white">
                     <div className="card-body">
                       <div className="text-white text-shadow">
                         <h1 className="text-uppercase mb-3">Digital Hearts NFT</h1>

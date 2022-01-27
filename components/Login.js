@@ -7,12 +7,12 @@ function Login() {
   const {authenticate, authError} = useMoralis();
   return (
     <>
-    <button onClick={authenticate} className="btn btn-primary">Connect Wallet</button>
-    {
-      authError && (
-        <small className={styles.error}>Error: {authError.name}<br/>{authError.message}</small>
-      )
-    }
+      <button onClick={authenticate} className="btn btn-primary">Connect Wallet</button>
+      {
+        authError && (
+          <small className={styles.error}>Error: {authError.name}<br/>{authError.message}</small>
+        )
+      }
     </>
   )
 }
