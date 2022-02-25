@@ -65,6 +65,13 @@ function Header () {
           {isAuthenticated ? (
             <>
               <button type="button" className="btn btn-primary text-shadow border-corners border-corners_white" data-bs-toggle="modal" data-bs-target="#accountModal">
+                {account ? getEllipsisTxt(account, 6) : 'Account'}
+              </button>                
+            </>  
+          ) : (
+            <>
+              <Login />
+            </>
                 {getEllipsisTxt(account, 6)}
               </button>                
             </>  
