@@ -72,6 +72,11 @@ function Header () {
             <>
               <Login />
             </>
+                {getEllipsisTxt(account, 6)}
+              </button>                
+            </>  
+          ) : (
+            <Login />
           )}
         </div>
       </div>
