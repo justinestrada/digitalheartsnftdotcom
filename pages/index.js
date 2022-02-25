@@ -66,7 +66,7 @@ export default function Home() {
             <div className="container">
               <div className="row">
                 <div className="col-lg-5">
-                  <div id="hero_inner-left-card" className="card border-corners border-corners_white">
+                  <div id="hero_inner-left-card" className="card border-corners border-corners_white m-3">
                     <div className="card-body">
                       <div className="text-white text-shadow">
                         <h1 className="text-uppercase mb-3">Digital Hearts NFT</h1>
@@ -82,9 +82,7 @@ export default function Home() {
                       </div>
                     </div>
                   </div>
-                </div>
-                <div id="hero_overlay-container_right" className="col-lg-3 offset-lg-4">
-                  <div className="card">
+                  <div className="card" style={{width: 'fit-content', marginLeft: '16px'}}>
                     <div className="card-body" style={{padding: '0.5rem'}}>
                       <div className="text-white text-shadow">
                         <a href="https://www.instagram.com/digitalheartsnft/" target="_blank" rel="noreferrer">
@@ -93,6 +91,14 @@ export default function Home() {
                       </div>
                     </div>
                   </div>
+                </div>
+                <div id="hero_overlay-container_right" className="col-lg-3 offset-lg-4">
+                  <a 
+                    href="#"
+                    className="btn btn-primary text-shadow border-corners border-corners_white"
+                    style={{padding: '1rem 1.5rem', fontSize: '18px', textTransform: 'uppercase'}}>
+                    Enter Marketplace
+                  </a>
                 </div>
               </div>
             </div>

@@ -1,17 +1,18 @@
-
+import { useState } from 'react';
 import Header from '../components/Header';
 import Script from 'next/script'
 import { useMoralis } from 'react-moralis'
 
 export default function Marketplace() {
+  const [selectedCollectionSet, setCollectionSet] = useState('all');
   const { isAuthenticated, authenticate } = useMoralis();
   const sets = [
     'Festival Classics',
     'Fruit Loops',
     'Matrix the Movie',
-    'Lion\'s Den (Mikey Lion Inspired)',
-    'When Pigs Fly (Porky Inspired)',
-    'Dagon Hearts (Asian Inspired Collection)',
+    'Lion\'s Den',
+    'When Pigs Fly',
+    'Dagon Hearts',
     'Space Cowboy',
     'Mad Max',
     'Set 9',
@@ -115,6 +116,10 @@ export default function Marketplace() {
       ]
     }
   ]
+  const onSelectCollectionSet = (value) => {
+    setCollectionSet(value)
+    console.log(value)
+  }
   return (
     <>
       <main id="marketplace" style={{backgroundImage: 'url(/bg-colorful.jpg)'}}>
@@ -148,9 +153,10 @@ export default function Marketplace() {
               </div>
             </div>
             <div id="marketplace_filters" className="row mb-4">
-              <div className="col-lg-4">
-                <div className="form-group">
-                  <label className="text-white">Sets</label>
+              <div className="col">
+                <div className="h4 text-white">Sets</div>
+                <div className="filter_set-circles">
+                  {/*
                   <select className="form-control">
                     { sets ? (
                       sets?.map((item, index) => {
@@ -162,6 +168,27 @@ export default function Marketplace() {
                       <div className="py-5 text-center">Loading...</div>
                     )}
                   </select>
+                  */}
+                    { sets ? (
+                      sets?.map((item, index) => {
+                        const checked = selectedCollectionSet.toLowerCase() === item.toLowerCase()
+                        const label_classes = 'filter_set-circle'
+                        if (checked) {
+                          label_classes += ' selected'
+                        }
+                        return (
+                          <>
+                            <label className={label_classes} for={'set-' + index} key={index}
+                              onClick={() => onSelectCollectionSet(item)}>
+                              <input type="radio" id={'set-' + index} name="set" value={item} checked={checked}/>
+                              <span className="text-white text-shadow">{item}</span>
+                            </label>
+                          </>
+                        )
+                      })
+                    ) : (
+                      <div className="py-5 text-center">Loading...</div>
+                    )}
                 </div>
               </div>
             </div>
